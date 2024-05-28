@@ -2,7 +2,10 @@ const navBar = document.getElementById("nav-bar");
 const categoryDropdown = document.createElement('select');
 const typeDropdown = document.createElement('select');
 const difficultyDropdown = document.createElement('select');
-navBar.append(categoryDropdown, typeDropdown, difficultyDropdown);
+
+
+// navBar.append(categoryDropdown, typeDropdown, difficultyDropdown);
+
 
 
 function apiFetch(){
