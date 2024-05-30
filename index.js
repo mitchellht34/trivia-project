@@ -1,17 +1,37 @@
 
-
-
-let object = {
-    amount: 10,
-    category: 9,
-    difficulty: "easy",
-    type: "boolean"
-}
-let string = `https://opentdb.com/api.php?amount=${object.amount}${object.category ? "&category=" + object.category : ""}${object.difficulty ? "&difficulty=" + object.difficulty : ""}${object.type ? "&type=" + object.type : ""}`;
-
-function apiFetch(urlObject){
+document.addEventListener("DOMContentLoaded", () => {
     
-    fetch(`https://opentdb.com/api.php?amount=10`)
+    const numQuestions = document.getElementById("num-questions");
+    const category = document.getElementById("category");
+    const type = document.getElementById("type");
+    const difficulty = document.getElementById("difficulty");
+    const form = document.querySelector("form");
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        
+        const numQuestions = document.getElementById("num-questions");
+        const category = document.getElementById("category");
+        const type = document.getElementById("type");
+        const difficulty = document.getElementById("difficulty");
+
+        const urlObject = {
+            amount: numQuestions.value,
+            category: category.value,
+            difficulty: difficulty.value,
+            type: type.value
+        }
+
+        const url = `https://opentdb.com/api.php?amount=${urlObject.amount}${urlObject.category ? "&category=" + urlObject.category : ""}${urlObject.difficulty ? "&difficulty=" + urlObject.difficulty : ""}${urlObject.type ? "&type=" + urlObject.type : ""}`;
+        apiFetch(url);
+    })
+})
+
+function apiFetch(url){
+    
+    fetch(url)
     .then((resp) => resp.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+        console.log(data.results);
+    });
 }
