@@ -7,11 +7,7 @@ let object = {
     difficulty: "easy",
     type: "boolean"
 }
-console.log(object)
 let string = `https://opentdb.com/api.php?amount=${object.amount}${object.category ? "&category=" + object.category : ""}${object.difficulty ? "&difficulty=" + object.difficulty : ""}${object.type ? "&type=" + object.type : ""}`;
-console.log(string);
-console.log(!!object.category);
-
 
 function apiFetch(urlObject){
     
