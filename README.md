@@ -1,20 +1,11 @@
 # trivia-project
 
-# Foobar
+## Description
 
-Foobar is a Python library for dealing with word pluralization.
-
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
+Uses Open Trivia Database to generate a list of trivia questions and display the answers
 
 ## Usage
 
-```python
 import foobar
 
 # returns 'words'
