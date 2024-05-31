@@ -6,25 +6,49 @@ Uses Open Trivia Database to generate a list of trivia questions and display the
 
 ## Usage
 
-import foobar
+Captures elements from the DOM enabling you to choose what options you would like to include in the fetch call
 
-# returns 'words'
-foobar.pluralize('word')
+## Options
 
-# returns 'geese'
-foobar.pluralize('goose')
+Number of Questions:
+    1 (min) - 50 (max)
 
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
+Available Categories:
+    Any Category
+    General Knowledge
+    Entertainment: Books
+    Entertainment: Film
+    Entertainment: Music
+    Entertainment: Musicals & Theatres
+    Entertainment: Television
+    Entertainment: Video Games
+    Entertainment: Board Games
+    Science & Nature
+    Science: Computers
+    Science: Mathematics
+    Mythology
+    Sports
+    Geography
+    History
+    Politics
+    Art
+    Celebrities
+    Animals
+    Vehicles
+    Entertainment: Comics
+    Science: Gadgets
+    Entertainment: Japanese Anime & Manga
+    Entertainment: Cartoon & Animations
 
-## Contributing
+Available Difficulties:
+    Easy
+    Medium
+    Hard
 
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+Available Type of Questions:
+    True / False
+    Multiple Choice
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[Open Trvia Database](https://opentdb.com/api_config.php)
